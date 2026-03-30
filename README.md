@@ -1,12 +1,12 @@
-# Dockerized Static Website using Nginx
+# Dockerized Nginx Website
 
-## Overview
+## Project Overview
 
-This is a simple project where I containerized a static HTML website using Docker and Nginx. I built this as part of my DevOps learning to understand how Docker images and containers work in real scenarios.
+This project demonstrates how to deploy a static website using Docker and Nginx. It shows how to containerize a simple HTML application and run it inside a Docker container.
 
 ---
 
-## Technologies Used
+## Tech Stack
 
 * Docker
 * Nginx
@@ -14,47 +14,31 @@ This is a simple project where I containerized a static HTML website using Docke
 
 ---
 
-## What I Did
+## How It Works
 
-* Created a basic static website using HTML
-* Wrote a Dockerfile to build a custom image
-* Used Nginx to serve the website inside a container
-* Ran the container with port mapping to access it locally
-
----
-
-## Project Structure
-
-```
-.
-├── Dockerfile
-└── index.html
-```
+* A custom Docker image is built using a Dockerfile
+* Nginx is used as the web server
+* The container serves the website on a mapped port
 
 ---
 
-## How to Run
+## Run Locally
 
-### 1. Clone the repository
-
-```
-git clone https://github.com/Farsanaks/docker-nginx-website.git
-cd docker-nginx-website
-```
-
-### 2. Build the Docker image
+### Build Docker Image
 
 ```
 docker build -t farsana-site .
 ```
 
-### 3. Run the container
+### Run Container
 
 ```
 docker run -d -p 8081:80 --name farsana-app farsana-site
 ```
 
-### 4. Open in browser
+### Access Application
+
+Open in your browser:
 
 ```
 http://localhost:8081
@@ -64,32 +48,31 @@ http://localhost:8081
 
 ## Output
 
-A simple webpage displaying:
-
-**Hello from Farsana 🚀**
-
----
-
-## What I Learned
-
-* Basics of Docker (images, containers, Dockerfile)
-* How to containerize a simple application
-* Running and managing containers
-* Debugging common Docker issues
+Displays a custom webpage:
+**Hello from Farsana **
 
 ---
 
-## Author
+## Docker Hub
 
-**Farsana K S**
+https://hub.docker.com/r/farsanaks/farsana-site
+
+---
+
+## Key Learnings
+
+* Built a custom Docker image using Dockerfile
+* Deployed a containerized web application
+* Understood port mapping and container lifecycle
+* Gained hands-on experience with Docker commands
 
 ---
 
 ## Future Improvements
 
-* Add Docker Compose
-* Deploy on AWS EC2
-* Set up CI/CD using GitHub Actions
+* Add Docker Compose for multi-container setup
+* Implement CI/CD pipeline using GitHub Actions
+* Deploy the application on AWS
 
 ---
 
